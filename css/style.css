@@ -1,0 +1,678 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GENERAL */
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Libre Bodoni", serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  width: 100%;
+}
+
+/* COLORS */
+
+.color1 {
+  color: #183939;
+}
+
+.color2 {
+  color: #512400;
+}
+
+.color3 {
+  color: #f5f2e7;
+}
+
+.color4 {
+  color: #ead4a7;
+}
+
+.color5 {
+  color: #687d6d;
+}
+
+.color6 {
+  color: #d98c4a;
+}
+
+/*************** Fonts *********************/
+
+@font-face {
+  font-family: "Libre Bodoni";
+  src:
+    url(fonts/LibreBodoni/LibreBodoni-VariableFont_wght.woff) format("woff"),
+    url(fonts/LibreBodoni/LibreBodoni-VariableFont_wght.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src:
+    url(fonts/Montserrat/Montserrat-VariableFont_wght.woff) format("woff"),
+    url(fonts/Montserrat/Montserrat-VariableFont_wght.woff2) format("woff2");
+}
+
+/********************************HEADER OG FOOTER**********************************/
+/* HEADER STYLE */
+.site-header {
+  background: transparent;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #f5f2e7;
+  font-size: 20px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #ead4a7;
+}
+
+/* BURGER */
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #512400;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+
+/* LIGHT BURGER VERSION */
+.burger_light {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger_light .line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #f5f2e7;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger_light {
+  display: none;
+}
+
+/*MOBILE BURGER*/
+
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+    background-color: transparent;
+    border: 0;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #f5f2e7;
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px #f5f2e7;
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+
+  .burger_light {
+    display: block;
+    background-color: transparent;
+    border: 0;
+  }
+  .burger_light.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger_light.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger_light.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+}
+/* LIGHT HEADER VERSION */
+.light-header {
+  background-color: #f5f2e7;
+}
+
+.light-header .nav-menu a {
+  color: #512400;
+}
+
+.light-header .nav-menu a:hover {
+  color: #000000;
+}
+
+/* FOOTER STYLE */
+.site-footer {
+  background-color: #f5f2e7;
+}
+
+.footer-links {
+  color: #512400;
+  font-size: 14px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.footer-links li {
+  margin-bottom: 15px;
+}
+
+/********************************FORSIDE**********************************/
+/* HERO STYLE */
+.hero {
+  background-color: rgba(0, 0, 0, 0.2);
+  background-blend-mode: darken;
+}
+
+.hero-text h1 {
+  margin: 0;
+  color: #f5f2e7;
+  font-size: 64px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.hero-text p {
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: #f5f2e7;
+  font-size: 24px;
+}
+
+/* INFO GRID STYLE */
+.info-grid {
+  background-color: #f5f2e7;
+}
+
+.info-card h2 {
+  color: #183939;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 10px 0 5px;
+}
+
+.info-card p {
+  color: #183939;
+  font-size: 14px;
+  max-width: 220px;
+  line-height: 1.5;
+  margin: 0;
+}
+.info-card a {
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover a {
+  transform: scale(1.1);
+}
+/* STORIES SECTION STYLE */
+.stories {
+  background-color: #e2cfa4;
+  background-image: url(../imgs/Background_tile.webp);
+  background-repeat: repeat;
+}
+
+.stories h2 {
+  color: #183939;
+  font-size: 32px;
+  letter-spacing: 1px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.video-box {
+  border: 6px solid #183939;
+}
+
+/* COMMUNITY SECTION STYLE */
+.community {
+  background-color: #f5f2e7;
+}
+
+.community h2 {
+  color: #512400;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.community-card {
+  text-decoration: none;
+}
+
+.community-card h3 {
+  color: #512400;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.community-card img {
+  transition: transform 0.3s ease;
+}
+
+.community-card:hover img {
+  transform: scale(1.05);
+}
+
+/********************************GET SETTLED SIDE**********************************/
+/* INTRO STYLE */
+
+.settled-intro {
+  background-color: #f5f2e7;
+}
+
+.settled-title {
+  color: #512400;
+  font-size: 64px;
+  text-transform: uppercase;
+}
+
+.settled-links a {
+  text-decoration: none;
+  color: #512400;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.settled-links a:hover {
+  color: #d98c4a;
+}
+
+/* MOVING GUIDE STYLE */
+
+.moving-guide {
+  background-color: #ead4a7;
+}
+
+.moving-guide-content h2 {
+  color: #d98c4a;
+  font-size: 48px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.moving-guide-content p {
+  color: #512400;
+  font-size: 18px;
+}
+
+.guide-button {
+  display: inline-block;
+  padding: 14px 42px;
+  background-color: #d98c4a;
+  color: #512400;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.guide-button:hover {
+  background-color: #512400;
+  color: #d98c4a;
+}
+
+/* HOUSING SECTION STYLE */
+
+.housing-section {
+  background-color: #f5f2e7;
+}
+
+.housing-content h2 {
+  color: #d98c4a;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.housing-btn {
+  display: inline-block;
+  padding: 16px 40px;
+  background-color: #512400;
+  color: #f5f2e7;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.housing-btn:hover {
+  background-color: #d98c4a;
+}
+
+.housing-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #d98c4a;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.housing-link:hover {
+  color: #512400;
+}
+
+/* HELP SECTION STYLE */
+
+.help-section {
+  background-color: #ead4a7;
+}
+
+.help-section h2 {
+  color: #512400;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.help-links a {
+  text-decoration: none;
+  color: #512400;
+  font-size: 16px;
+}
+
+.help-links a:hover {
+  color: #d98c4a;
+}
+/********************************FIND A JOB SIDE**********************************/
+/* INTRO */
+
+.job-intro {
+  background-color: #f5f2e7;
+}
+
+.job-intro-content h1 {
+  color: #183939;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+.job-intro-content p {
+  color: #512400;
+  font-size: 16px;
+}
+
+/* JOB SEARCH STYLE */
+
+.job-search {
+  background-color: #183939;
+}
+
+.job-search h2 {
+  color: #d98c4a;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.search-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+  height: 48px;
+  background-color: #f5f2e7;
+  color: #183939;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.search-btn:hover {
+  background-color: #d98c4a;
+}
+
+.job-search-link {
+  color: #f5f2e7;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.job-search-link:hover {
+  color: #d98c4a;
+}
+
+/* WORK CULTURE STYLE */
+
+.work-culture {
+  background-color: #f5f2e7;
+}
+
+.work-culture-content h2 {
+  color: #d98c4a;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.work-culture-links a {
+  text-decoration: none;
+  color: #183939;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.work-culture-links a:hover {
+  color: #d98c4a;
+}
+
+/* CV SECTION STYLE */
+
+.cv-section {
+  background-color: #687d6d;
+}
+
+.cv-content h2 {
+  color: #f5f2e7;
+  font-size: 42px;
+  text-transform: uppercase;
+  line-height: 1.15;
+  letter-spacing: 1px;
+}
+
+.cv-links a {
+  text-decoration: none;
+  color: #183939;
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.cv-links a:hover {
+  color: #d98c4a;
+}
+
+/************************************ MOBILE LAYOUT ***********************************/
+/************ FORSIDE *************/
+/* HERO SECTION */
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 34px;
+    line-height: 1.1;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  /* ICON / INFO SECTION */
+
+  .info-text h2 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .info-text p {
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  /************************ GET SETTLED ***********************/
+  .settled-title {
+    font-size: 34px;
+  }
+
+  .settled-links a {
+    font-size: 14px;
+  }
+
+  /* MOVING GUIDE SECTION */
+  .moving-guide-content h2 {
+    font-size: 26px;
+  }
+
+  .moving-guide-content p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .guide-button {
+    font-size: 12px;
+    padding: 14px 28px;
+  }
+
+  /* HOUSING SECTION */
+  .housing-content h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .housing-btn {
+    width: 140px;
+    padding: 10px 0;
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .housing-link {
+    font-size: 12px;
+  }
+
+  /* HELP SECTION */
+  .help-section h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .help-links {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  /************************ FIND A JOB  ***********************/
+  .job-intro-content h1 {
+    font-size: 30px;
+  }
+
+  .job-intro-content p {
+    font-size: 12px;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+
+  /* WHERE TO SEARCH*/
+  .job-search h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .job-search-btn {
+    width: 180px;
+    padding: 12px 0;
+    font-size: 12px;
+  }
+
+  .job-search-link {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+
+  /* WORK CULTURE*/
+  .work-culture-content h2 {
+    font-size: 24px;
+  }
+
+  .work-culture-links a {
+    font-size: 14px;
+  }
+  /* CV TEMPLATES SECTION*/
+  .cv-content h2 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .cv-links a {
+    font-size: 14px;
+  }
+}

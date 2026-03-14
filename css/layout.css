@@ -1,0 +1,731 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/********************************HEADER OG FOOTER**********************************/
+/* HEADER LAYOUT */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.site-header .logo img {
+  display: block;
+  width: 230px;
+  height: auto;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* FOOTER LAYOUT */
+.site-footer {
+  padding: 30px 40px;
+}
+
+.site-footer .logo {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  align-items: start;
+  column-gap: 40px;
+}
+
+.site-footer .logo img {
+  max-height: 55px;
+  width: auto;
+  display: block;
+  margin-bottom: 40px;
+}
+
+/********************************FORSIDE**********************************/
+/* HERO LAYOUT */
+.hero {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+}
+
+.hero img {
+  grid-row: 1 / 4;
+  grid-column: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.site-header {
+  grid-row: 1;
+  grid-column: 1;
+  z-index: 1;
+}
+
+.hero-text {
+  grid-row: 3;
+  grid-column: 1;
+  text-align: center;
+  margin-bottom: 40px;
+  z-index: 1;
+  width: 100%;
+}
+
+/* INFO GRID LAYOUT */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 120px 80px;
+  text-align: center;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.info-card img {
+  width: auto;
+  height: 100px;
+}
+
+/* STORIES SECTION LAYOUT */
+.stories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.video-box {
+  width: 70%;
+  max-width: 900px;
+  margin-top: 40px;
+}
+
+.video-box video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* COMMUNITY SECTION LAYOUT */
+.community {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  max-width: 900px;
+  margin: 60px auto 0;
+}
+
+.community-card {
+  display: block;
+}
+
+.community-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/********************************GET SETTLED SIDE**********************************/
+/* INTRO LAYOUT */
+
+.settled-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 60px;
+}
+
+.settled-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.settled-grid {
+  display: grid;
+  grid-template-columns: 320px 260px;
+  gap: 70px;
+  justify-content: center;
+  align-items: start;
+}
+
+.settled-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.settled-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+}
+
+.settled-links li {
+  margin-bottom: 40px;
+}
+
+/* MOVING GUIDE SECTION */
+
+.moving-guide {
+  display: grid;
+  grid-template-columns: 420px 260px;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  padding: 80px 60px;
+}
+
+.moving-guide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.moving-guide-content p {
+  margin: 35px 0;
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+.moving-guide-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* HOUSING SECTION */
+
+.housing-section {
+  display: grid;
+  grid-template-columns: 360px 420px;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  padding: 80px 60px;
+}
+
+.housing-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.housing-content {
+  text-align: center;
+}
+
+.housing-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+/* HELP SECTION */
+
+.help-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 80px 60px;
+}
+
+.help-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.help-links li {
+  margin-bottom: 10px;
+}
+
+/********************************FIND A JOB SIDE**********************************/
+/* INTRO */
+
+.job-intro {
+  display: grid;
+  grid-template-columns: 360px 320px;
+  justify-content: center;
+  align-items: start;
+  gap: 120px;
+  padding: 180px 60px;
+}
+
+.job-intro-content {
+  text-align: center;
+}
+
+.job-intro-content p {
+  margin-top: 30px;
+  line-height: 1.6;
+}
+
+.job-intro-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* JOB SEARCH SECTION */
+
+.job-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 80px 60px;
+}
+
+.job-search-buttons {
+  display: flex;
+  gap: 40px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* WORK CULTURE SECTION */
+
+.work-culture {
+  display: grid;
+  grid-template-columns: 320px 360px;
+  justify-content: center;
+  align-items: start;
+  gap: 80px;
+  padding: 80px 60px;
+}
+
+.work-culture-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.work-culture-links {
+  list-style: none;
+  padding: 0;
+  margin: 40px 0 0 0;
+}
+
+.work-culture-links li {
+  margin-bottom: 22px;
+}
+
+/* CV SECTION */
+
+.cv-section {
+  display: grid;
+  grid-template-columns: 400px 320px;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding: 80px 60px;
+}
+
+.cv-content {
+  align-self: start;
+  padding-top: 30px;
+}
+
+.cv-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cv-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 55px;
+}
+
+.cv-links li {
+  margin-bottom: 26px;
+}
+
+/************************************ MOBILE LAYOUT ***********************************/
+
+/******* FORSIDE *********/
+/* HERO SECTION */
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 20px;
+  }
+
+  .site-header .logo img {
+    width: 140px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 40px;
+    color: #f5f2e7;
+    line-height: 1;
+  }
+
+  .hero {
+    min-height: 100vh;
+    height: auto;
+  }
+
+  .hero-text {
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+
+  /*************************************************SPURJA KENNARANN**********************************************************/
+  .site-header .light-header .menu-icon {
+    color: black;
+  }
+  /*************************************************SPURJA KENNARANN**********************************************************/
+}
+
+/* ICON / INFO SECTION */
+@media (max-width: 768px) {
+  .info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px 90px;
+  }
+
+  .info-card {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    align-items: center;
+    text-align: left;
+    column-gap: 70px;
+  }
+
+  .info-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info-icon img {
+    width: 60px;
+    height: auto;
+    display: block;
+  }
+
+  .info-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* COMMUNITY SECTION */
+  .community {
+    padding: 60px 20px;
+  }
+
+  .community-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 260px;
+    margin: 40px auto 0;
+  }
+
+  .community-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .community-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .community-card h3 {
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  /* FOOTER */
+
+  .site-footer {
+    padding: 40px 20px;
+  }
+
+  .site-footer .logo {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 20px;
+    text-align: center;
+  }
+
+  .site-footer .logo img {
+    max-height: 55px;
+    width: auto;
+  }
+
+  .footer-links {
+    justify-self: center;
+  }
+
+  /******************** GET SETTLED ***********************/
+  /* INTRO */
+
+  .settled-intro {
+    padding: 35px 20px 50px;
+  }
+
+  .settled-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .settled-grid {
+    grid-template-columns: 150px 1fr;
+    gap: 20px;
+    align-items: start;
+    justify-content: center;
+  }
+
+  .settled-image img {
+    width: 150px;
+    height: auto;
+    display: block;
+  }
+
+  .settled-content {
+    padding-top: 6px;
+  }
+
+  .settled-links {
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .settled-links li {
+    margin-bottom: 16px;
+  }
+
+  /* MOVING GUIDE*/
+
+  .moving-guide {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 15px;
+    padding: 60px 20px;
+  }
+
+  .moving-guide-content {
+    display: contents;
+  }
+
+  .moving-guide-content h2 {
+    order: 1;
+    text-align: center;
+  }
+
+  .moving-guide-image {
+    order: 2;
+  }
+
+  .moving-guide-image img {
+    width: 150px;
+    height: auto;
+    display: block;
+  }
+
+  .moving-guide-content p {
+    order: 3;
+    max-width: 220px;
+    text-align: center;
+  }
+
+  .guide-button {
+    order: 4;
+  }
+
+  /* HOUSING SECTION */
+
+  .housing-section {
+    grid-template-columns: 180px 200px;
+    justify-content: center;
+    gap: 22px;
+    padding: 45px 20px;
+    align-items: start;
+  }
+
+  .housing-image img {
+    width: 180px;
+    height: auto;
+    display: block;
+  }
+
+  .housing-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .housing-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-top: 20px;
+  }
+
+  .housing-btn {
+    width: 170px;
+    text-align: center;
+  }
+
+  .housing-link {
+    display: block;
+    text-align: center;
+    margin-top: 22px;
+  }
+
+  /*HELP SECTION */
+  .help-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px 60px;
+  }
+
+  .help-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+  }
+
+  .help-links li {
+    margin-bottom: 10px;
+  }
+
+  /************************ FIND A JOB ***********************/
+  /* INTRO*/
+  .job-intro {
+    grid-template-columns: 200px 200px;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    align-items: start;
+  }
+
+  .job-intro-image img {
+    width: 200px;
+  }
+
+  .job-intro-content {
+    text-align: left;
+  }
+
+  /* WHERE TO SEARCH*/
+  .job-search {
+    padding: 50px 20px;
+  }
+
+  .job-search-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-top: 20px;
+  }
+
+  /* WORK CULTURE*/
+  .work-culture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .work-culture-content {
+    display: contents;
+  }
+
+  .work-culture-content h2 {
+    order: 1;
+  }
+
+  .work-culture-image {
+    order: 2;
+  }
+
+  .work-culture-image img {
+    width: 200px;
+    height: auto;
+    display: block;
+  }
+
+  .work-culture-links {
+    order: 3;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* CV TEMPLATES SECTION*/
+  .cv-section {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 50px 20px;
+  }
+
+  .cv-image img {
+    width: 200px;
+    height: auto;
+    display: block;
+  }
+
+  .cv-links {
+    margin-top: 50px;
+  }
+
+  .cv-links li {
+    margin-bottom: 14px;
+  }
+}
