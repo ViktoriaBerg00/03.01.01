@@ -267,7 +267,6 @@ section {
 .info-card p {
   color: #183939;
   font-size: 14px;
-  max-width: 220px;
   line-height: 1.5;
   margin: 0;
 }
@@ -280,13 +279,14 @@ section {
 }
 /* STORIES SECTION STYLE */
 .stories {
-  background-color: #e2cfa4;
-  background-image: url(../imgs/Background_tile.webp);
+  background-color: #ead4a7;
+  background-image: url(../imgs/background_tile.webp);
+  background-size: 800px;
   background-repeat: repeat;
 }
 
 .stories h2 {
-  color: #183939;
+  color: #512400;
   font-size: 32px;
   letter-spacing: 1px;
   margin: 0;

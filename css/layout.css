@@ -41,14 +41,14 @@
   padding: 30px 40px;
 }
 
-.site-footer .logo {
+.footer-grid {
   display: grid;
   grid-template-columns: 3fr 1fr 1fr;
   align-items: start;
   column-gap: 40px;
 }
 
-.site-footer .logo img {
+.footer-logo img {
   max-height: 55px;
   width: auto;
   display: block;
@@ -92,20 +92,29 @@
 .info-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 120px 80px;
+  gap: 60px;
+  padding: 100px 80px;
   text-align: center;
 }
 
 .info-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+  width: 260px;
+  margin: 0 auto;
 }
 
 .info-card img {
-  width: auto;
   height: 100px;
+  width: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.info-card h2 {
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  margin: 0;
 }
 
 /* STORIES SECTION LAYOUT */
@@ -310,11 +319,11 @@
 }
 
 .job-search-buttons {
-  display: flex;
-  gap: 40px;
-  margin: 40px 0;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 20px;
   justify-content: center;
+  margin: 40px 0;
 }
 
 /* WORK CULTURE SECTION */
@@ -665,11 +674,7 @@
   }
 
   .job-search-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    margin-top: 20px;
+    grid-template-columns: 1fr;
   }
 
   /* WORK CULTURE*/
