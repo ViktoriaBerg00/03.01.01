@@ -64,17 +64,18 @@ section {
 @font-face {
   font-family: "Libre Bodoni";
   src:
-    url(fonts/LibreBodoni/LibreBodoni-VariableFont_wght.woff) format("woff"),
-    url(fonts/LibreBodoni/LibreBodoni-VariableFont_wght.woff2) format("woff2");
+    url(fonts/LibreBodoni/LibreBodoni-VariableFont_wght.woff2) format("woff2"),
+    url(fonts/LibreBodoni/LibreBodoni-VariableFont_wght.woff) format("woff");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Montserrat";
   src:
-    url(fonts/Montserrat/Montserrat-VariableFont_wght.woff) format("woff"),
-    url(fonts/Montserrat/Montserrat-VariableFont_wght.woff2) format("woff2");
+    url(fonts/Montserrat/Montserrat-VariableFont_wght.woff2) format("woff2"),
+    url(fonts/Montserrat/Montserrat-VariableFont_wght.woff) format("woff");
+  font-display: swap;
 }
-
 /********************************HEADER OG FOOTER**********************************/
 /* HEADER STYLE */
 .site-header {
